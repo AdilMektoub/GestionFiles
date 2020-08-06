@@ -1,4 +1,4 @@
-package StringBufferBuilder;
+package BDD;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -52,7 +52,7 @@ public static void main(String[] args) throws IOException {
 	dossier.mkdir();
 //	à l’intérieur je crée un fichier txt appelé testJ.txt :
 //	j'insére dans testJ.txt les noms des stagiaires un nom pour chaque ligne
-	File file = new File("C://Users/Poste 2/Admin/testJAVA/testJ.txt");
+	File file = new File("C://Users/Poste 2/Admin/Desktop/testJAVA/testJ.txt");
 	if (!file.exists())
 	try {
 		file.createNewFile();
@@ -60,7 +60,7 @@ public static void main(String[] args) throws IOException {
 		e.printStackTrace();
 	}
 	FileWriter writer = new FileWriter(file);
-	BufferedWriter bw = new BufferedWriter(writer);
+	BufferedWriter bw = new BufferedWriter(writer); // Récuperer l'ecriture
 	for (String i : stagiaires) {
 		bw.write(i);
 		bw.newLine();
@@ -74,7 +74,7 @@ public static void main(String[] args) throws IOException {
 	File file1 = new 
 	File("C://Users/Admin/Desktop/testJAVA/cVotreExercice.txt");            
 	BufferedReader reader = new BufferedReader(new InputStreamReader
-			(new FileInputStream(file1), "UTF-8"));
+			(new FileInputStream(file1), "UTF-8")); //Récuperer la lecture
 	String s = reader.readLine();
 	while(s != null) {
 		list.add(s);
