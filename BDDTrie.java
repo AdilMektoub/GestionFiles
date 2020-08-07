@@ -1,4 +1,4 @@
-package BDD;
+package StringBufferBuilder;
 
 public class BDDTrie {
 
