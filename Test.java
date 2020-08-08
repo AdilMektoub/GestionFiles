@@ -3,6 +3,7 @@ package StringBufferBuilder;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
@@ -72,20 +73,44 @@ public class Test {
 			System.out.println("Majuscule et trie avec expression Lambda");
 			trimaj2.trierEnMaj(newList);
 			System.out.println(" ");
-		}
-	
-	//Suite 
-//	System.out.println("PARTIE 3 ----------------------------------");
-//		//FICHIER
-//		File f = new File("C://Users//Admin//Desktop");
-//		Fichier file1 = new Fichier() {
-//			
-//		}
+		
+			
+	System.out.println("PARTIE 3 ----------------------------------");
+		//FICHIER
+		File f = new File("C://Users//Admin//Desktop");
+		Fichier file1 = new Fichier() {
+			public void lire(File fichier, String[] tab) throws IOException {
+				if (!fichier.exists()) {
+					fichier.createNewFile();
+					System.out.println("fichier" + fichier + " a été créer avec succés");
+					
+				}
+				BufferedWriter bw = new BufferedWriter(new FileWriter(f));
+				for (String elt : tab) {
+					bw.write(elt);
+					bw.newLine();
+				}
+				bw.close();
+}};
+		file1.lire(f, stagiaires);
+		//expression Lambda SUITE 
 		
 		
 		
 		
+			
+	}
 		
 }
+
+
+
+
+
+
+
+
+
+
 
 
