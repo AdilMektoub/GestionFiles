@@ -91,10 +91,29 @@ public class Test {
 					bw.newLine();
 				}
 				bw.close();
-}};
+}
+
+			@Override
+			public void Lire(File f, String[] tab) throws IOException {
+				// TODO Auto-generated method stub
+				
+			}};
 		file1.lire(f, stagiaires);
 		//expression Lambda SUITE 
-		
+		File f2 = new File("C://Users//Admin//Desktop");
+		Fichier file2 = (fichier,tab) -> {
+			if (!fichier.exists()) {
+				fichier.createNewFile();
+				System.out.println("fichier " + fichier + " à été créer abvec succés");
+			}
+			BufferedWriter bw = new BufferedWriter(new FileWriter(f2));
+			for (String elt : tab) {
+				bw.write(elt);
+				bw.newLine();
+			}
+			bw.close();
+		};
+		file2.Lire(f2, stagiaires);
 		
 		
 		
