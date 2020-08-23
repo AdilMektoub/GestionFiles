@@ -162,7 +162,7 @@ public class Test {
 			try ( PreparedStatement statement  = (PreparedStatement) connection.prepareStatement( strSql ) ) {
 //				statement.setString( 1, login );
 //				statement.setString( 2, password );
-				try ( ResultSet resultSet = statement.executeQuery() ) {
+				try ( ResultSet resultSet = statement.executeQuery() ) { 
 					while ( resultSet.next() ) { //(int id, int id_livre, String nom, String login, String password)	
 								list.add(resultSet.getString( "titre" )); }
 				}
@@ -174,6 +174,51 @@ public class Test {
 	}
 }
 
+//package Expression Lambda;
+//
+//import java.io.BufferedWriter;
+//import java.io.File;
+//import java.io.FileWriter;
+//import java.util.ArrayList;
+//import java.util.Arrays;
+//import java.util.Collection;
+//import java.util.Collections;
+//
+//import com.mysql.fabric.xmlrpc.base.Array;
+//
+//public class Test {
+//
+//	public static void main(String[] args) {
+//		
+//
+//		System.out.println("PARTIE 1 ----------------------");
+//		//CHAT
+//		Chat monChat = new Chat() {
+//			public void mioler(String nom) {
+//				System.out.println(nom + " Miole");	
+//			}
+//		};
+//		monChat.mioler("BissBiss");
+//		//EXPRESSION LAMBDA
+//		Chat nom = (s) -> System.out.println(s + " je Miole");
+//		nom.mioler("Avec Expression : Bissbiss");
+//		
+//		
+//		System.out.println("PARTIE 2 --------------------------");
+//		//TRIE DES MAJUSCULES 1er façon
+//		String[] stagiaires = { "Anis", "Inga", "Imén", "Sébastien", "Nicolas", "Dalia" };
+//		
+//		TriMaj t = new TriMaj() {
+//			public void trierEnMaj(ArrayList<String> trierString) {
+//				for (String s : trierString) {
+//				char p = s.charAt(0);
+//				ArrayList<String> ordreCroissant = new ArrayList<String>(); 
+//				ordreCroissant.add((int) p, s);
+//				Collections.sort(ordreCroissant);
+//				System.out.print(ordreCroissant);
+//				}
+//			}
+//		};
 
 
 
