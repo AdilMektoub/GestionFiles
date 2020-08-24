@@ -16,6 +16,8 @@ import com.mysql.fabric.xmlrpc.base.Array;
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.PreparedStatement;
 
+import ExpressionLambda.TriMaj;
+
 public class Test {
 
 	//Déclaration variable Static de la methode affichage
@@ -220,6 +222,34 @@ public class Test {
 //			}
 //		};
 
+//2éme Façon
+//ArrayList newList = new ArrayList(Arrays.asList(stagiaires));
+//
+//System.out.println("ma liste initiale");
+//System.out.println(newList);
+//TriMaj trimaj = new TriMaj () {
+//	public void trierEnMaj(ArrayList<String> List) {
+//	for (int i = 0; i < List.size(); i++) {
+//		List.set(i, List.get(i).toUpperCase());
+//	}
+//	Collections.sort(List);
+//	System.out.println(List);
+//	}
+//	};
+//	System.out.println("Majuscule et trie avec classe anonymes");
+//	trimaj.trierEnMaj(newList);
+//	//EXPRESSION LAMBDA
+//	TriMaj trimaj2 = (List)-> {
+//		for (int i = 0; i < List.size(); i++) {
+//			List.set(i, List.get(i).toUpperCase());
+//		}
+//		Collections.sort(List);
+//		System.out.println(List);
+//	};
+//	System.out.println("Majuscule et trie avec expression Lambda");
+//	trimaj2.trierEnMaj(newList);
+//	System.out.println(" ");
+//}
 
 
 
